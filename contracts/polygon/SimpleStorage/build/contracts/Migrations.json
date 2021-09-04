@@ -445,7 +445,7 @@
   "sourceMap": "67:304:0:-:0;;;219:43;;;;;;;;;-1:-1:-1;239:5:0;:18;;-1:-1:-1;;;;;;239:18:0;247:10;239:18;;;67:304;;;;;;",
   "deployedSourceMap": "67:304:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;115:36;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;91:20;;;:::i;:::-;;;;;;;:::i;266:103::-;;;;;;:::i;:::-;;:::i;:::-;;115:36;;;;:::o;91:20::-;;;-1:-1:-1;;;;;91:20:0;;:::o;266:103::-;202:5;;-1:-1:-1;;;;;202:5:0;188:10;:19;184:26;;;328:24:::1;:36:::0;;;184:26;266:103;:::o;14:190:2:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:2;;84:120;-1:-1:-1;84:120:2:o;209:203::-;-1:-1:-1;;;;;373:32:2;;;;355:51;;343:2;328:18;;310:102::o;417:177::-;563:25;;;551:2;536:18;;518:76::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.25 <=0.8.0;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  constructor() {\n    owner = msg.sender;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/home/zu/project/figment/learn-web3-dapp/contracts/polygon/SimpleStorage/contracts/Migrations.sol",
+  "sourcePath": "/Users/local-admin/repos/learn-pathways/learn-web3-dapp/contracts/polygon/SimpleStorage/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1249,7 +1249,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-08-23T02:53:23.652Z",
+  "updatedAt": "2021-09-04T19:17:11.142Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
