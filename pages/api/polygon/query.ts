@@ -13,14 +13,18 @@ export default async function query(
     const provider = new ethers.providers.JsonRpcProvider(url, "any")
 
     try {
-      const networkName = await provider.getNetwork().then(res => { return res.name })
+      const networkName = await provider.getNetwork()
+                            .then(res => { return res.name })
 
       // TODO
       // Define those variables below
-      const chainId = undefined
-      const blockHeight = undefined
-      const gasPriceAsGwei = undefined
-      const blockInfo = undefined
+      const chainId = provider.network.chainId;
+      const blockHeight = await provider.getBlockNumber();
+      const gasPriceAsGwei = await provider.getGasPrice()
+                              .then(res => {
+                                return ethers.utils.formatUnits(res, "gwei");
+                              })
+      const blockInfo = await provider.getBlockWithTransactions(blockHeight);
 
       res
         .status(200)

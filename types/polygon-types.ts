@@ -1,19 +1,19 @@
 import { BlockWithTransactions } from '@ethersproject/abstract-provider'
 
 export type PolygonChainIdT = {
-    chainId: number
+  chainId: number
 }
 
 export type PolygonQueryResponse = {
-    networkName: string
-    chainId: number
+  networkName: string
+  chainId: number
 	blockHeight: number
-    gasPriceAsGwei: string
-    blockInfo: BlockWithTransactions
+  gasPriceAsGwei: string
+  blockInfo: BlockWithTransactions
 }
 
 export type PolygonQueryErrorResponse = {
-    message: string
+  message: string
 }
   
 export type PolygonAccountT = string | null

@@ -24,8 +24,10 @@ const Balance = ({ account }: { account: PolygonAccountT }) => {
   
     // TODO
     // Define those two variables
-    const selectedAddressBalance = undefined
-    const balanceToDisplay = undefined
+    const selectedAddressBalance = await provider.getBalance(selectedAddress);
+    const balanceToDisplay = ethers.utils.formatEther(
+                                            selectedAddressBalance.toString()
+                                          );
   
     setBalance(balanceToDisplay);
     setFetching(false)

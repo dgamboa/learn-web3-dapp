@@ -52,3 +52,6 @@ package-lock.json
 # near
 neardev
 contracts/near/target/
+
+# .secret files
+*.secret
